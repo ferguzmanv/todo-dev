@@ -1,4 +1,4 @@
-const xIcon = () => {
+const crossIcon = () => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg"
             width="18" height="18">
@@ -16,4 +16,4 @@ const xIcon = () => {
 
 };
 
-export default xIcon;
+export default crossIcon;

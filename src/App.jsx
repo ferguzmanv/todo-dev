@@ -1,5 +1,5 @@
 import React from 'react';
-import xIcon from "./components/xIcon";
+import crossIcon from "./components/xIcon.jsx";
 
 const App = () => {
   return (
@@ -14,7 +14,7 @@ const App = () => {
         </div>
 
 
-        <form className="flex items-center overflow-hidde rounded-md bg-white py-2 m- gap-4">
+        <form className="flex items-center overflow-hidde rounded-md bg-white py-2 gap-4">
           <span className="inline-block h-5 w-5 rounded-full border-2 mx-3 "></span>
           <input
             type="text"
@@ -25,11 +25,14 @@ const App = () => {
 
       <main className="container mx-auto mt-10 px-4">
         <div className="rounded-md bg-white px-4">
-          <article>
+          <article className='flex gap-4 py-4 b-2 border-b-gray-400'>
             <button className="inline-block h-5 w-5 rounded-full border-2 mx-3"></button>
             <p className="text-gray-500">Estudiar AWS</p>
             <button>
-            <xIcon />
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"><path fill="#494C6B" fill-rule="evenodd" 
+            d="M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"/></svg>
+
+            {/* <  xIcon /> */}
             </button>
 
           </article>
