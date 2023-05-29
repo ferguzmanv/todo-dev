@@ -1,5 +1,6 @@
 import React from 'react';
-import xIcon from "./components/xIcon";
+import CrossIcon from "./components/crossIcon.jsx";
+import MoonIcon from './components/MoonIcon.jsx';
 
 const App = () => {
   return (
@@ -10,11 +11,13 @@ const App = () => {
 
         <div className="flex justify-between">
           <h1 className="uppercase text-white text-3xl font-bold tracking-[0.1em] m-6" >To do's </h1>
-          <button>luna</button>
+          <button>
+            <MoonIcon fill="#676" />
+          </button>
         </div>
 
 
-        <form className="flex items-center overflow-hidde rounded-md bg-white py-2 m- gap-4">
+        <form className="flex items-center overflow-hidde rounded-md bg-white py-2 gap-4">
           <span className="inline-block h-5 w-5 rounded-full border-2 mx-3 "></span>
           <input
             type="text"
@@ -25,38 +28,52 @@ const App = () => {
 
       <main className="container mx-auto mt-10 px-4">
         <div className="rounded-md bg-white px-4">
-          <article>
-            <button className="inline-block h-5 w-5 rounded-full border-2 mx-3"></button>
-            <p className="text-gray-500">Estudiar AWS</p>
-            <button>
-            <xIcon />
-            </button>
 
+
+          <article className='flex gap-4 py-4 b-2 border-b-gray-400 border-b-[1.5px]'>
+            <button className="inline-block h-5 w-5 rounded-full border-2 mx-3"></button>
+            <p className="grow text-gray-500">Estudiar AWS</p>
+            <button className='flex-none'>
+              <CrossIcon />
+            </button>
           </article>
-          <article>
-            <button>circle</button>
-            <p>Estudiar 2</p>
-            <button>EXISDE</button>
+              
+          <article className='flex gap-4 py-4 b-2 border-b-gray-400 border-b-[1.5px]'>
+            <button className="inline-block h-5 w-5 rounded-full border-2 mx-3"></button>
+            <p className="grow text-gray-500">Estudiar AWS</p>
+            <button className='flex-none'>
+              <CrossIcon />
+            </button>
           </article>
-          <article>
-            <button>circle</button>
-            <p>Estudiar 3</p>
-            <button>EXISDE</button>
+
+          <article className='flex gap-4 py-4 b-2 border-b-gray-400 border-b-[1.5px]'>
+            <button className="inline-block h-5 w-5 rounded-full border-2 mx-3"></button>
+            <p className="grow text-gray-500">Estudiar AWS</p>
+            <button className='flex-none'>
+              <CrossIcon />
+            </button>
           </article>
-          <section>
-            <span>3 items left</span>
-            <button>Clear completed</button>
+
+
+          <section className='flex justify-between py-4 px-4  '>
+            <span className='text-gray-400'>3 items left</span>
+            <button className='text-gray-400'>Clear completed</button>
           </section>
         </div>
+
+
       </main>
 
-      <section className="container mx-auto px-4">
-        <button>all</button>
-        <button>active</button>
-        <button>completed</button>
+      <section className="container mx-auto mt-8 px-4">
+        <div className='flex justify-center gap-4 rounded-md bg-white p-4 '>
+        <button className="hover:text-blue-300">all</button>
+        <button className='hover:text-blue-300'>active</button>
+        <button className='hover:text-blue-300'>completed</button>
+        </div>
       </section>
 
     </div>
+
   );
 };
 
