@@ -23,7 +23,19 @@ const initialStateTodo = [
 
 const App = () => {
 
-  const [todos, setTodos]= useState(initialStateTodo)
+  const [todos, setTodos] = useState(initialStateTodo)
+
+  const createTodo = (title) => {
+    const newTodo = {
+      id: Date.now(),
+      title,
+      completed: false,
+
+    }
+
+    setTodos([...todos, newTodo]);
+  }
+
 
   return (
 
@@ -34,7 +46,7 @@ const App = () => {
 
       <main className="container mx-auto mt-10 px-4">
 
-        <TodoCreate />
+        <TodoCreate createTodo={createTodo}/>
 
         <TodoList todos={todos} />
 
